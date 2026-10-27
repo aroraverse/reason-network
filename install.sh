@@ -41,7 +41,7 @@ trap cleanup EXIT INT TERM
 
 usage() { sed -n '2,21p' "$0" | sed 's/^# \{0,1\}//'; }
 
-need_value() { [ "$#" -ge 2 ] && [ -n "$2" ] || fail "$1 needs a value"; }
+need_value() { if [ "$#" -lt 2 ] || [ -z "$2" ]; then fail "$1 needs a value"; fi; }
 
 while [ "$#" -gt 0 ]; do
     case "$1" in
