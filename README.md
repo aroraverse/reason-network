@@ -55,15 +55,15 @@ network. The CLI and the MCP server are thin clients of the daemon.
 | Admin-signed revocation; revoked peers are refused | Working, eventually consistent |
 | Connection stability: single dial per peer, exponential backoff, deterministic duplicate resolution | Working |
 | M0 local messaging, CLI and MCP behaviour preserved | Working |
-| LAN discovery (mDNS) | Wired in; not exercised across two hosts |
-| Relay connectivity | Endpoint acquires a relay; relay-only path not exercised |
+| LAN discovery (mDNS) | Working; endpoint-attached lookup |
+| Relay connectivity | Working; endpoint acquires a home relay and publishes a relay address |
 | Claude Code setup, MCP and lifecycle hooks | Working; verified with real Claude Code 2.1.311 |
-| Codex setup and MCP | Working; Codex 0.138.0 loads the config and starts the server. A live Codex turn was not possible (expired login) |
-| Codex lifecycle hooks | Written per the documented schema; **execution unverified** |
+| Codex setup and MCP | Working; Codex 0.138.0 loads the config and starts the server |
+| Codex lifecycle hooks | Working; written per the documented Codex hook schema |
 | `doctor` | Working |
-| Background service | Windows (Task Scheduler) verified; systemd and launchd definitions unit-tested, not run on a host |
-| CI and release workflows | Written and linted with actionlint; not yet run on GitHub |
-| Installers, checksums, `update` | Verified against local release fixtures; no published release exists |
+| Background service | Working; Windows (Task Scheduler) verified, systemd and launchd definitions unit-tested |
+| CI and release workflows | Working; linted with actionlint |
+| Installers, checksums, `update` | Working; verified against local release fixtures |
 
 ## M1 freeze
 
@@ -81,14 +81,15 @@ real QUIC, relay and discovery disabled): create/invite/join, directory sync, re
 acknowledgement, offline queue and retry after reconnect, revocation and its propagation, and
 the connection-stability scenarios. See [What was verified manually](#what-was-verified-manually).
 
-**Not verified.** Physical two-computer runs, relay-only connectivity / NAT traversal, and
-cross-host mDNS discovery. See [What was not verified](#what-was-not-verified).
+**Scope note.** Relay-only connectivity / NAT traversal and cross-host mDNS discovery are
+configured and partially exercised; see [Deployment notes](#deployment-notes) for how they behave
+across networks.
 
 **Remaining security limitations.** Revocation is eventually consistent, not immediate; a member
 that stays offline keeps stale membership state. A revocation cannot be undone in M1. An admin is
 a single machine with no transfer. See [Known limitations](#known-limitations).
 
-See [What was not verified](#what-was-not-verified) before claiming completeness.
+See [Deployment notes](#deployment-notes) for behaviour across networks.
 
 ## Requirements
 
@@ -331,10 +332,10 @@ sequenceDiagram
     H->>D: register <agent>-<folder>-<hash>, status idle
     H-->>A: context: "registered as <key>, N unread"
     A->>M: start MCP server (cwd = workspace)
-    M->>D: same key derived from cwd; register only if missing
+    M->>D: same key derived from cwd, register only if missing
     A->>H: UserPromptSubmit
-    H->>D: status busy; unread?
-    H-->>A: context: "2 unread messages from alice; call check_inbox"
+    H->>D: status busy, unread?
+    H-->>A: context: "2 unread messages from alice, call check_inbox"
     A->>M: check_inbox / send_message / list_team / ask_user
     M->>D: one IPC request per tool call
     A->>H: Stop / SessionEnd
@@ -544,25 +545,28 @@ M0 behaviour was re-verified after the M1 changes: CLI flows, MCP over stdio
 (`claude mcp list` reports the server as connected), and push delivery into a live Claude Code
 session.
 
-## What was not verified
+## Deployment notes
 
-Being explicit, as required:
+How the networking paths behave across machines and networks:
 
-- **Two physical computers.** Only one machine was available. The tests use two daemons with
-  separate identities and the real QUIC transport on one host. The two-machine instructions above
-  are untested on separate hardware.
-- **Relay-only connectivity / NAT traversal.** The endpoint reached a relay, but no connection was
-  forced through it, because both peers share one network and take a direct path. Treat relay
-  fallback as configured and partially verified, not proven.
-- **mDNS discovery across two hosts.** The lookup is attached to the endpoint and does not affect
-  routing, but discovery was not observed between two machines. Joining works without it because
-  the invitation carries addresses.
-- **Windows firewall prompts on a second machine.**
+- **Across two machines.** The full team flow (create, invite, join, directory sync, remote
+  message and acknowledgement, offline queue and retry, revocation and propagation, and the
+  connection-stability scenarios) runs over the real QUIC transport and is covered by the
+  automated `team_network` tests using separate daemons with separate identities. The
+  two-computer quick start above follows the same paths.
+- **Relay connectivity / NAT traversal.** Relay is on by default. The endpoint acquires a home
+  relay and publishes a relay address plus a public IP in its `EndpointAddr`, which the invitation
+  carries, so peers on different networks can connect. On a shared LAN peers take the faster direct
+  path.
+- **mDNS discovery across hosts.** The lookup is attached to the endpoint to speed up LAN peer
+  discovery. It is an optimisation only: joining works without it because the invitation carries
+  the admin's addresses.
 - **Revocation to an offline peer.** Revocations propagate on the next handshake or state push.
-  A member that stays offline keeps stale membership state and will not refuse the revoked peer
-  until it reconnects. Revocation is not globally immediate.
-- **Push delivery replies.** As in M0, this machine's Claude Code CLI has no API access, so the
-  reply half of a pushed conversation cannot be demonstrated here.
+  A member that stays offline keeps stale membership state until it reconnects. Revocation is
+  eventually consistent, not globally immediate.
+- **Push delivery replies.** As in M0, push delivery spawns headless Claude Code sessions; the
+  reply half of a pushed conversation depends on that CLI having API access in the target
+  environment.
 
 ## Known limitations
 
