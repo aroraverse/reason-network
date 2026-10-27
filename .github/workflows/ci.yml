@@ -1,0 +1,93 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: "1"
+
+jobs:
+  rust:
+    name: Rust (${{ matrix.name }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Windows x86-64
+            os: windows-latest
+          - name: Linux x86-64
+            os: ubuntu-latest
+          - name: macOS Apple Silicon
+            os: macos-14
+          - name: macOS Intel
+            os: macos-15-intel
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: Format
+        run: cargo fmt --check
+      - name: Clippy
+        run: cargo clippy --all-targets --locked -- -D warnings
+      - name: Test
+        run: cargo test --locked
+
+  scripts-unix:
+    name: Scripts (${{ matrix.os }})
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-14]
+    steps:
+      - uses: actions/checkout@v4
+      - name: ShellCheck
+        if: runner.os == 'Linux'
+        run: shellcheck -s sh install.sh scripts/test_install.sh
+      - name: Packaging tests
+        run: python3 -m unittest discover -s scripts -p "test_*.py" -v
+      - name: install.sh tests
+        run: sh scripts/test_install.sh
+
+  scripts-windows:
+    name: Scripts (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Build
+        run: cargo build --locked
+      - name: PSScriptAnalyzer
+        shell: pwsh
+        run: |
+          Install-Module PSScriptAnalyzer -Scope CurrentUser -Force
+          $findings = @('install.ps1', 'scripts/test_install.ps1') |
+            ForEach-Object { Invoke-ScriptAnalyzer -Path $_ -Severity Warning,Error }
+          $findings | Format-Table -AutoSize
+          if ($findings) { exit 1 }
+      - name: Packaging tests
+        run: python -m unittest discover -s scripts -p "test_*.py" -v
+      - name: install.ps1 tests (PowerShell 7)
+        shell: pwsh
+        run: ./scripts/test_install.ps1 -Binary target/debug/reason-network.exe
+      - name: install.ps1 tests (Windows PowerShell 5.1)
+        shell: powershell
+        run: ./scripts/test_install.ps1 -Binary target/debug/reason-network.exe

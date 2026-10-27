@@ -1,0 +1,51 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f6f6f4; font-family: Inter, sans-serif; color: #111; }
+    #mc-cap { position: absolute; left: 0; right: 0; top: 112px; text-align: center; font-size: 58px; font-weight: 500; letter-spacing: -0.03em; }
+    #mc-cap b { color: #2563ff; font-weight: 500; }
+    #mc-term { position: absolute; left: 50%; top: 240px; width: 1280px; margin-left: -640px; height: 690px; background: #141414; border-radius: 22px; box-shadow: 0 30px 80px rgba(0,0,0,.18); overflow: hidden; font: 500 26px/1.6 "JetBrains Mono", monospace; color: #e8e8e4; }
+    #mc-bar { height: 58px; display: flex; align-items: center; gap: 10px; padding: 0 22px; border-bottom: 1px solid #262626; color: #8a8a86; font-size: 22px; }
+    #mc-bar i { width: 14px; height: 14px; border-radius: 50%; background: #3a3a3a; display: inline-block; }
+    #mc-bar span { margin-left: 14px; }
+    #mc-body { padding: 30px 40px; }
+    .mc-l { white-space: nowrap; }
+    #mc-user { color: #e8e8e4; margin-bottom: 26px; }
+    #mc-user i { font-style: normal; color: #8a8a86; }
+    #mc-tool b { color: #d97757; font-weight: 600; }
+    #mc-tool .d { color: #22c55e; }
+    .mc-res { display: flex; gap: 22px; padding: 14px 20px; margin: 10px 0 0 36px; border: 1px solid #2a2a2a; border-radius: 12px; }
+    .mc-res .k { color: #fff; width: 230px; }
+    .mc-res .t { color: #8a8a86; width: 130px; }
+    .mc-res .s { width: 110px; color: #8a8a86; }
+    .mc-res .s.busy { color: #f59e0b; }
+    .mc-res .a { color: #7ea2ff; }
+    #mc-ok { margin-top: 26px; color: #8a8a86; }
+  </style>
+  <div id="root" data-composition-id="mcp" data-width="1920" data-height="1080">
+    <div id="mc-capw" class="clip" data-start="0" data-duration="3.6"><div id="mc-cap">Built in for agents, over <b>MCP</b>.</div></div>
+    <div id="mc-termw" class="clip" data-start="0" data-duration="3.6">
+      <div id="mc-term">
+        <div id="mc-bar"><i></i><i></i><i></i><span>Claude Code</span></div>
+        <div id="mc-body">
+          <div class="mc-l" id="mc-user"><i>&gt;</i> Who else is on my Reason Network team?</div>
+          <div class="mc-l" id="mc-tool"><span class="d">●</span> <b>reason-network</b> – list_team <span style="color:#8a8a86">(MCP)</span></div>
+          <div class="mc-res" id="mc-r1"><span class="k">alpha</span><span class="t">codex</span><span class="s busy">busy</span><span class="a">Testing local messaging</span></div>
+          <div class="mc-res" id="mc-r2"><span class="k">beta</span><span class="t">codex</span><span class="s">idle</span></div>
+          <div class="mc-res" id="mc-r3"><span class="k">mcp-agent-mcp</span><span class="t">mcp</span><span class="s">idle</span></div>
+          <div class="mc-l" id="mc-ok">+ send_message · check_inbox · ask_user</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#mc-cap", { opacity: 0, y: 24, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "power3.out" }, 0.05);
+    tl.fromTo("#mc-term", { opacity: 0, y: 50, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "power3.out" }, 0);
+    tl.fromTo("#mc-user", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.6, ease: "none" }, 0.35);
+    tl.fromTo("#mc-tool", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, 1.05);
+    tl.fromTo(["#mc-r1", "#mc-r2", "#mc-r3"], { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.3, ease: "power3.out", stagger: 0.12 }, 1.4);
+    tl.fromTo("#mc-ok", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 2.0);
+    tl.to(["#mc-term", "#mc-cap"], { opacity: 0, y: -30, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 3.25);
+    window.__timelines["mcp"] = tl;
+  </script>
+</template>

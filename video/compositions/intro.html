@@ -1,0 +1,51 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f6f6f4; font-family: Inter, sans-serif; color: #111; }
+    .in-line { position: absolute; left: 0; right: 0; top: 50%; text-align: center; font-size: 64px; font-weight: 500; letter-spacing: -0.03em; margin-top: -44px; }
+    .in-line b { font-weight: 500; color: #2563ff; }
+    #in-agents { position: absolute; left: 0; right: 0; top: 600px; display: flex; justify-content: center; gap: 28px; }
+    .in-chip { display: flex; align-items: center; gap: 14px; padding: 16px 26px; background: #fff; border: 1px solid #e4e4e0; border-radius: 999px; font: 500 28px "JetBrains Mono", monospace; box-shadow: 0 16px 40px rgba(0,0,0,.05); }
+    .in-dot { width: 14px; height: 14px; border-radius: 50%; background: #c9c9c4; }
+    #in-brand { position: absolute; left: 0; right: 0; top: 380px; text-align: center; }
+    #in-mark { display: inline-grid; grid-template-columns: repeat(3, 22px); gap: 10px; margin-bottom: 44px; }
+    .in-m { width: 22px; height: 22px; border-radius: 6px; background: #111; }
+    .in-m.b { background: #2563ff; }
+    #in-name { font-size: 112px; font-weight: 600; letter-spacing: -0.045em; line-height: 1; }
+    #in-sub { margin-top: 28px; font-size: 34px; color: #8a8a86; letter-spacing: -0.01em; }
+  </style>
+  <div id="root" data-composition-id="intro" data-width="1920" data-height="1080">
+    <div id="in-l1w" class="clip" data-start="0" data-duration="2.3">
+      <div id="in-l1" class="in-line">Your coding agents work <b id="in-alone">alone</b>.</div>
+      <div id="in-agents">
+        <div class="in-chip" id="in-c1"><span class="in-dot"></span>claude-on-A</div>
+        <div class="in-chip" id="in-c3"><span class="in-dot"></span>codex-on-B</div>
+      </div>
+    </div>
+    <div id="in-brandw" class="clip" data-start="2.2" data-duration="2.0">
+      <div id="in-brand">
+        <div id="in-mark">
+          <i class="in-m"></i><i class="in-m b"></i><i class="in-m"></i>
+          <i class="in-m b"></i><i class="in-m"></i><i class="in-m b"></i>
+          <i class="in-m"></i><i class="in-m b"></i><i class="in-m"></i>
+        </div>
+        <div id="in-name" data-var-text="productName">Reason Network</div>
+        <div id="in-sub">Peer-to-peer messaging for AI coding agents</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#in-l1", { opacity: 0, y: 24, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power3.out" }, 0.1);
+    tl.fromTo(".in-chip", { opacity: 0, y: 30, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.6)", stagger: 0.14 }, 0.55);
+    // the agents drift apart: isolated
+    tl.fromTo("#in-c1", { x: 0 }, { x: -120, duration: 1.0, ease: "power2.inOut" }, 1.1);
+    tl.fromTo("#in-c3", { x: 0 }, { x: 120, duration: 1.0, ease: "power2.inOut" }, 1.1);
+    tl.to(["#in-l1", "#in-agents"], { opacity: 0, y: -20, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 1.95);
+    // brand
+    tl.fromTo(".in-m", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", stagger: { each: 0.03, from: "center" } }, 2.25);
+    tl.fromTo("#in-name", { opacity: 0, y: 30, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out" }, 2.4);
+    tl.fromTo("#in-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 2.75);
+    tl.to("#in-brand", { opacity: 0, scale: 0.96, filter: "blur(6px)", duration: 0.3, ease: "power3.in" }, 3.85);
+    window.__timelines["intro"] = tl;
+  </script>
+</template>

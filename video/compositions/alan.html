@@ -1,0 +1,108 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f6f6f4; font-family: Inter, sans-serif; color: #111; overflow: hidden; }
+    #al-head { position: absolute; left: 0; right: 0; top: 470px; display: flex; justify-content: center; align-items: center; gap: 22px; font-size: 64px; font-weight: 500; letter-spacing: -0.03em; }
+    #al-pill { display: inline-flex; align-items: center; gap: 16px; padding: 10px 30px 10px 14px; background: #111; color: #fff; border-radius: 999px; font-weight: 600; }
+    #al-logo { width: 56px; height: 56px; border-radius: 50%; background: #2563ff; display: grid; place-items: center; font-size: 34px; font-weight: 700; color: #fff; }
+    #al-tag { position: absolute; left: 0; right: 0; top: 580px; text-align: center; font-size: 30px; color: #8a8a86; }
+    #al-prompt { position: absolute; left: 50%; top: 500px; width: 1180px; margin-left: -590px; height: 96px; background: #fff; border: 1px solid #e4e4e0; border-radius: 999px; box-shadow: 0 20px 60px rgba(0,0,0,.07); display: flex; align-items: center; padding: 0 18px 0 22px; gap: 18px; }
+    #al-plogo { width: 54px; height: 54px; border-radius: 50%; background: #111; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 28px; flex: none; }
+    #al-ptext { flex: 1; font-size: 32px; letter-spacing: -0.01em; white-space: nowrap; overflow: hidden; }
+    #al-send { width: 60px; height: 60px; border-radius: 50%; background: #2563ff; display: grid; place-items: center; flex: none; }
+    #al-cursor { position: absolute; left: 1560px; top: 640px; width: 48px; height: 48px; }
+    #al-stat { position: absolute; left: 150px; top: 110px; }
+    #al-statlabel { font-size: 26px; color: #8a8a86; margin-bottom: 10px; font-family: "JetBrains Mono", monospace; }
+    #al-statline { position: relative; height: 80px; font-size: 64px; font-weight: 500; letter-spacing: -0.03em; }
+    .al-s { position: absolute; left: 0; top: 0; white-space: nowrap; }
+    .al-s b { color: #2563ff; font-weight: 500; }
+    #al-wall { position: absolute; left: -200px; top: 300px; width: 2400px; }
+    .al-row { display: flex; gap: 22px; margin-bottom: 22px; }
+    .al-card { flex: none; width: 380px; height: 200px; background: #fff; border: 1px solid #e4e4e0; border-radius: 18px; padding: 22px 24px; box-shadow: 0 14px 40px rgba(0,0,0,.05); font-family: "JetBrains Mono", monospace; }
+    .al-card.d { background: #111; border-color: #111; color: #e8e8e4; }
+    .al-fn { display: flex; justify-content: space-between; font-size: 26px; font-weight: 600; margin-bottom: 16px; }
+    .al-fn span { color: #2563ff; font-weight: 500; }
+    .al-card.d .al-fn span { color: #7ea2ff; }
+    .al-code { font-size: 18px; line-height: 1.6; color: #8a8a86; white-space: nowrap; overflow: hidden; }
+  </style>
+  <div id="root" data-composition-id="alan" data-width="1920" data-height="1080">
+    <div id="al-intro" class="clip" data-start="0" data-duration="1.7">
+      <div id="al-head">Built with <span id="al-pill"><span id="al-logo">A</span><span data-var-text="ideName">Alan</span></span></div>
+      <div id="al-tag">the agentic IDE that wrote every line</div>
+    </div>
+    <div id="al-promptw" class="clip" data-start="1.6" data-duration="1.6">
+      <div id="al-prompt">
+        <div id="al-plogo">A</div>
+        <div id="al-ptext">Build peer-to-peer messaging for AI coding agents.</div>
+        <div id="al-send"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+      </div>
+      <svg id="al-cursor" viewBox="0 0 24 24"><path d="M4 2l16 9-7 2-3 7z" fill="#111" stroke="#fff" stroke-width="1.5" stroke-linejoin="round"/></svg>
+    </div>
+    <div id="al-build" class="clip" data-start="3.1" data-duration="2.9" data-layout-allow-overflow>
+      <div id="al-wall">
+        <div class="al-row" id="al-r1">
+          <div class="al-card"><div class="al-fn">store.rs<span>1,671</span></div><div class="al-code">pub struct Session {<br>pub struct Message {<br>pub struct Question {</div></div>
+          <div class="al-card d"><div class="al-fn">net/mod.rs<span>1,491</span></div><div class="al-code">pub struct NetOptions {<br>pub fn from_env() -&gt; Self {</div></div>
+          <div class="al-card"><div class="al-fn">agents.rs<span>1,328</span></div><div class="al-code">pub enum Agent {<br>pub fn parse_selection(text: &amp;str)</div></div>
+          <div class="al-card"><div class="al-fn">daemon.rs<span>1,199</span></div><div class="al-code">fn should_attempt(&amp;self, now: Instant)<br>fn succeeded(&amp;mut self) {</div></div>
+          <div class="al-card d"><div class="al-fn">team.rs<span>486</span></div><div class="al-code">pub struct MembershipRecord {<br>pub fn issue(<br>pub fn signing_bytes(&amp;self)</div></div>
+          <div class="al-card"><div class="al-fn">main.rs<span>1,287</span></div><div class="al-code">team-create · team-invite<br>team-join · directory<br>send-message · inbox</div></div>
+        </div>
+        <div class="al-row" id="al-r2">
+          <div class="al-card d"><div class="al-fn">identity.rs<span>141</span></div><div class="al-code">pub struct MachineIdentity {<br>pub fn load_or_create(data_dir)<br>pub fn peer_id(&amp;self)</div></div>
+          <div class="al-card"><div class="al-fn">net/proto.rs<span>344</span></div><div class="al-code">pub struct Frame {<br>pub enum Body {</div></div>
+          <div class="al-card"><div class="al-fn">mcp.rs<span>335</span></div><div class="al-code">pub struct SendMessageArgs {<br>pub struct CheckInboxArgs {<br>pub struct AskUserArgs {</div></div>
+          <div class="al-card d"><div class="al-fn">delivery.rs<span>332</span></div><div class="al-code">pub enum ClaudeEvent {<br>pub struct ClaudeBridge {</div></div>
+          <div class="al-card"><div class="al-fn">ipc.rs<span>230</span></div><div class="al-code">pub struct Connection {<br>pub async fn read_frame&lt;T&gt;(</div></div>
+          <div class="al-card"><div class="al-fn">service.rs<span>830</span></div><div class="al-code">Task Scheduler · systemd<br>launchd</div></div>
+        </div>
+        <div class="al-row" id="al-r3">
+          <div class="al-card"><div class="al-fn">team_network.rs<span>759</span></div><div class="al-code">tests/ · two daemons<br>invite · join · ack · retry</div></div>
+          <div class="al-card d"><div class="al-fn">mcp_tools.rs<span>184</span></div><div class="al-code">tests/ · list_team<br>send_message · check_inbox</div></div>
+          <div class="al-card"><div class="al-fn">doctor.rs<span>482</span></div><div class="al-code">reason-network doctor</div></div>
+          <div class="al-card"><div class="al-fn">update.rs<span>719</span></div><div class="al-code">versioned packages<br>SHA-256 checksums</div></div>
+          <div class="al-card d"><div class="al-fn">hook.rs<span>324</span></div><div class="al-code">Claude Code lifecycle hooks</div></div>
+          <div class="al-card"><div class="al-fn">protocol.rs<span>299</span></div><div class="al-code">reason-network/1</div></div>
+        </div>
+      </div>
+      <div id="al-stat">
+        <div id="al-statlabel">written with Alan</div>
+        <div id="al-statline">
+          <div class="al-s" id="al-s1"><b>14.8k</b> lines of Rust</div>
+          <div class="al-s" id="al-s2"><b>126</b> automated tests</div>
+          <div class="al-s" id="al-s3"><b>4</b> milestones shipped</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    // "Built with Alan"
+    tl.fromTo("#al-head", { opacity: 0, y: 24, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power3.out" }, 0.05);
+    tl.fromTo("#al-pill", { scale: 0.6, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.8)" }, 0.3);
+    tl.fromTo("#al-tag", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 0.6);
+    tl.to(["#al-head", "#al-tag"], { opacity: 0, y: -24, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, 1.35);
+    // the brief
+    tl.fromTo("#al-prompt", { opacity: 0, scale: 0.92, y: 20 }, { opacity: 1, scale: 1, y: 0, duration: 0.4, ease: "power3.out" }, 1.6);
+    tl.fromTo("#al-ptext", { clipPath: "inset(0 100% 0 0)" }, { clipPath: "inset(0 0% 0 0)", duration: 0.85, ease: "none" }, 1.85);
+    tl.fromTo("#al-cursor", { x: 260, y: 260, opacity: 0 }, { x: 0, y: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 2.2);
+    tl.to("#al-send", { scale: 0.86, duration: 0.08, ease: "power2.in" }, 2.78);
+    tl.to("#al-send", { scale: 1.08, duration: 0.15, ease: "power2.out" }, 2.86);
+    tl.to("#al-prompt", { y: -360, scale: 0.7, opacity: 0, duration: 0.35, ease: "power3.in" }, 2.9);
+    tl.to("#al-cursor", { opacity: 0, duration: 0.2 }, 2.9);
+    // the code wall builds
+    tl.fromTo(".al-card", { opacity: 0, y: 40, scale: 0.94 }, { opacity: 1, y: 0, scale: 1, duration: 0.4, ease: "power3.out", stagger: { each: 0.025, from: "random" } }, 3.1);
+    tl.fromTo("#al-wall", { rotation: -6, y: 60 }, { rotation: -6, y: 0, duration: 2.9, ease: "none" }, 3.1);
+    tl.fromTo("#al-r1", { x: 0 }, { x: -260, duration: 2.9, ease: "none" }, 3.1);
+    tl.fromTo("#al-r2", { x: -300 }, { x: 0, duration: 2.9, ease: "none" }, 3.1);
+    tl.fromTo("#al-r3", { x: -80 }, { x: -340, duration: 2.9, ease: "none" }, 3.1);
+    // stats swap
+    tl.fromTo("#al-statlabel", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 3.3);
+    tl.fromTo("#al-s1", { opacity: 0, y: 30, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 3.35);
+    tl.to("#al-s1", { opacity: 0, y: -30, filter: "blur(8px)", duration: 0.25, ease: "power3.in" }, 4.2);
+    tl.fromTo("#al-s2", { opacity: 0, y: 30, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 4.35);
+    tl.to("#al-s2", { opacity: 0, y: -30, filter: "blur(8px)", duration: 0.25, ease: "power3.in" }, 5.05);
+    tl.fromTo("#al-s3", { opacity: 0, y: 30, filter: "blur(8px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.4, ease: "power3.out" }, 5.2);
+    tl.to("#al-build", { opacity: 0, duration: 0.25, ease: "power2.in" }, 5.72);
+    window.__timelines["alan"] = tl;
+  </script>
+</template>

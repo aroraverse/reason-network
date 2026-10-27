@@ -1,0 +1,2219 @@
+{
+  "ok": false,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 26,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 2.1-37s, assets/sfx/whoosh-short.mp3 at 7.25-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 2.1-37s, assets/sfx/whoosh-short.mp3 at 12.75-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 2.1-37s, assets/sfx/whoosh.mp3 at 15-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 2.1-37s, assets/sfx/whoosh-short.mp3 at 20.5-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 2.1-37s, assets/sfx/whoosh.mp3 at 24.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 2.1-37s, assets/sfx/whoosh-short.mp3 at 29.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 7.25-37s, assets/sfx/whoosh-short.mp3 at 12.75-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 7.25-37s, assets/sfx/whoosh.mp3 at 15-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 7.25-37s, assets/sfx/whoosh-short.mp3 at 20.5-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 7.25-37s, assets/sfx/whoosh.mp3 at 24.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 7.25-37s, assets/sfx/whoosh-short.mp3 at 29.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 12.75-37s, assets/sfx/whoosh.mp3 at 15-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 12.75-37s, assets/sfx/whoosh-short.mp3 at 20.5-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 12.75-37s, assets/sfx/whoosh.mp3 at 24.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 12.75-37s, assets/sfx/whoosh-short.mp3 at 29.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 15-37s, assets/sfx/whoosh-short.mp3 at 20.5-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 15-37s, assets/sfx/whoosh.mp3 at 24.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 15-37s, assets/sfx/whoosh-short.mp3 at 29.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 20.5-37s, assets/sfx/whoosh.mp3 at 24.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh-short.mp3 at 20.5-37s, assets/sfx/whoosh-short.mp3 at 29.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 4 overlap (assets/sfx/notification.mp3 at 21.65-37s, assets/sfx/impact-bass-2.mp3 at 34.1-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "duplicate_audio_track",
+        "severity": "warning",
+        "message": "Multiple audible <audio>/<video> elements on track 3 overlap (assets/sfx/whoosh.mp3 at 24.6-37s, assets/sfx/whoosh-short.mp3 at 29.6-37s). This causes layered audio playback.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use non-overlapping time windows or different track indices."
+      },
+      {
+        "code": "gsap_timeline_set_initial_hide",
+        "severity": "warning",
+        "message": "Initial hidden state for \"#nw-A2, #nw-A3, #nw-A4, #nw-B2, #nw-B3\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+        "selector": "#nw-A2, #nw-A3, #nw-A4, #nw-B2, #nw-B3",
+        "dataAttributes": {},
+        "sourceFile": "D:\\Projects\\Building a Reason Network–class system\\video\\compositions\\network.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes."
+      },
+      {
+        "code": "gsap_timeline_set_initial_hide",
+        "severity": "warning",
+        "message": "Initial hidden state for \"#nw-A1c1, #nw-A1o1, #nw-A1c2, #nw-A1o2, #nw-B1c1, #nw-B1o1\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+        "selector": "#nw-A1c1, #nw-A1o1, #nw-A1c2, #nw-A1o2, #nw-B1c1, #nw-B1o1",
+        "dataAttributes": {},
+        "sourceFile": "D:\\Projects\\Building a Reason Network–class system\\video\\compositions\\network.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes."
+      },
+      {
+        "code": "gsap_timeline_set_initial_hide",
+        "severity": "warning",
+        "message": "Initial hidden state for \".nw-pk, #nw-Bshade, #nw-sub4\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+        "selector": ".nw-pk, #nw-Bshade, #nw-sub4",
+        "dataAttributes": {},
+        "sourceFile": "D:\\Projects\\Building a Reason Network–class system\\video\\compositions\\network.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes."
+      },
+      {
+        "code": "gsap_timeline_set_initial_hide",
+        "severity": "warning",
+        "message": "Initial hidden state for \"#nw-linklbl\" is set via tl.set(...) at position 0 inside the paused timeline. A zero-duration set at 0 does not render while the playhead sits exactly at 0, so frame 0 shows the un-hidden state.",
+        "selector": "#nw-linklbl",
+        "dataAttributes": {},
+        "sourceFile": "D:\\Projects\\Building a Reason Network–class system\\video\\compositions\\network.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Use gsap.set(...) (immediate, outside the timeline) for initial states, or author the hidden state directly in CSS/attributes."
+      }
+    ],
+    "filesScanned": 6
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 2,
+    "findings": [
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 26.722,
+        "selector": "#nw-B > div:nth-of-type(1) > div:nth-of-type(1)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1167,
+          "top": 272.5,
+          "right": 1321.7,
+          "bottom": 306.5,
+          "width": 154.7,
+          "height": 34
+        },
+        "containerSelector": "#nw-Bshade",
+        "text": "Computer B",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 1167,
+          "y": 272.5,
+          "width": 154.7,
+          "height": 34
+        },
+        "firstSeen": 26.722,
+        "lastSeen": 26.722,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.722
+        ]
+      },
+      {
+        "code": "text_occluded",
+        "severity": "info",
+        "time": 26.722,
+        "selector": "#nw-B > div:nth-of-type(1) > div:nth-of-type(2)",
+        "message": "Text is hidden beneath an opaque element.",
+        "rect": {
+          "left": 1593.8,
+          "top": 274,
+          "right": 1781,
+          "bottom": 305,
+          "width": 187.2,
+          "height": 31
+        },
+        "containerSelector": "#nw-Bshade",
+        "text": "cbb462…935e82",
+        "fixHint": "Give the text its own zone, raise its stacking order above the covering element, or mark intentional layering with data-layout-allow-occlusion.",
+        "coveredFraction": 1,
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 1593.8,
+          "y": 274,
+          "width": 187.2,
+          "height": 31
+        },
+        "firstSeen": 26.722,
+        "lastSeen": 26.722,
+        "occurrences": 1,
+        "heldMs": 0,
+        "times": [
+          26.722
+        ]
+      }
+    ],
+    "duration": 37,
+    "samples": [
+      2.056,
+      6.167,
+      10.278,
+      14.389,
+      18.5,
+      22.611,
+      26.722,
+      30.833,
+      34.944
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 2,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 3,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 3.03:1; WCAG AA requires 4.5:1.",
+        "text": "local",
+        "fg": "rgb(138,138,134)",
+        "bg": "rgb(240,240,237)",
+        "ratio": 3.03,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(109,109,106)",
+        "large": false,
+        "selector": "div > div:nth-of-type(3) > div > div:nth-of-type(5) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(3) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 670,
+          "y": 473.78125,
+          "width": 90,
+          "height": 41.1875
+        },
+        "time": 18.5,
+        "times": [
+          18.5
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 4.2:1; WCAG AA requires 4.5:1.",
+        "text": "remote · reachable",
+        "fg": "rgb(37,99,255)",
+        "bg": "rgb(232,238,255)",
+        "ratio": 4.2,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(35,95,244)",
+        "large": false,
+        "selector": "div > div:nth-of-type(3) > div > div:nth-of-type(5) > div:nth-of-type(3) > div:nth-of-type(2) > div:nth-of-type(2) > div:nth-of-type(4) > span:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 504.8125,
+          "y": 556.96875,
+          "width": 261.609375,
+          "height": 41.1875
+        },
+        "time": 18.5,
+        "times": [
+          18.5
+        ]
+      },
+      {
+        "code": "contrast_aa_failure",
+        "severity": "warning",
+        "message": "Contrast is 2.15:1; WCAG AA requires 4.5:1.",
+        "text": "queued",
+        "fg": "rgb(255,255,255)",
+        "bg": "rgb(245,158,11)",
+        "ratio": 2.15,
+        "requiredRatio": 4.5,
+        "suggestedColor": "rgb(68,68,68)",
+        "large": false,
+        "selector": "#nw-pk5",
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 858.3170776367188,
+          "y": 553,
+          "width": 116.421875,
+          "height": 48
+        },
+        "time": 26.722,
+        "times": [
+          26.722
+        ]
+      }
+    ],
+    "enabled": true,
+    "samples": [
+      2.056,
+      10.278,
+      18.5,
+      26.722,
+      34.944
+    ],
+    "checked": 37,
+    "passed": 34
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 22,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "first_frame_empty",
+        "severity": "warning",
+        "message": "Frame 0 shows only the background, and the first frame is the thumbnail on social players: have the title or key image already on screen at 0 s instead of entering from nothing; see references/review.md.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Peer-to-peer messaging for AI coding agents\" (8 words) is on screen 1.30 s (±0.01 s), under its 2.17 s floor: hold it about 0.5 s + 0.3 s a word (2.90 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Peer-to-peer messaging for AI coding agents",
+        "selector": "#in-sub",
+        "dataAttributes": {},
+        "sourceFile": "compositions/intro.html",
+        "bbox": {
+          "x": 604.03,
+          "y": 654.82,
+          "width": 711.9199999999998,
+          "height": 41
+        },
+        "time": 2.836,
+        "words": 8,
+        "seconds": 1.305,
+        "floorSeconds": 2.175
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"the agentic IDE that wrote every line\" (7 words) is on screen 0.97 s (±0.01 s), under its 1.95 s floor: hold it about 0.5 s + 0.3 s a word (2.60 s here) before it leaves or changes; see references/motion.md.",
+        "text": "the agentic IDE that wrote every line",
+        "selector": "#al-tag",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 704.16,
+          "y": 586.75,
+          "width": 511.67999999999995,
+          "height": 36
+        },
+        "time": 4.867,
+        "words": 7,
+        "seconds": 0.969,
+        "floorSeconds": 1.95
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Build peer-to-peer messaging for AI coding agents.\" (9 words) is on screen 1.20 s (±0.01 s), under its 2.40 s floor: hold it about 0.5 s + 0.3 s a word (3.20 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Build peer-to-peer messaging for AI coding agents.",
+        "selector": "#al-ptext",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 465.15,
+          "y": 528.58,
+          "width": 760.08,
+          "height": 38.99000000000001
+        },
+        "time": 6.102,
+        "words": 9,
+        "seconds": 1.203,
+        "floorSeconds": 2.4
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 51 text elements stay under it for 0.5 s or more, the smallest \"versioned packagesSHA-256 checksums\" at 17 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "versioned packagesSHA-256 checksums",
+        "selector": "#al-r3 > div:nth-of-type(4) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 971.7,
+          "y": 882.99,
+          "width": 190.09,
+          "height": 69.75
+        },
+        "time": 7.375,
+        "times": [
+          7.375,
+          7.375,
+          7.375,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.5,
+          7.625,
+          7.625,
+          7.625,
+          7.625,
+          7.625,
+          7.625,
+          7.625,
+          7.625,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.75,
+          7.875,
+          7.875,
+          7.875,
+          7.875,
+          7.875,
+          7.875,
+          7.875,
+          7.875,
+          7.875,
+          8.625,
+          8.75,
+          8.75,
+          8.875
+        ],
+        "fontPx": 17.48,
+        "floorPx": 28,
+        "seconds": 2.875,
+        "elements": [
+          {
+            "selector": "#al-r3 > div:nth-of-type(4) > div:nth-of-type(2)",
+            "text": "versioned packagesSHA-256 checksums",
+            "fontPx": 17.48,
+            "time": 7.375,
+            "seconds": 2.875
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "pub struct NetOptions {pub fn from_env() -> Self {",
+            "fontPx": 17.53,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "pub struct Frame {pub enum Body {",
+            "fontPx": 17.53,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(6) > div:nth-of-type(2)",
+            "text": "team-create · team-inviteteam-join · directorysend-message · inbox",
+            "fontPx": 17.58,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(3) > div:nth-of-type(2)",
+            "text": "pub enum Agent {pub fn parse_selection(text: &str)",
+            "fontPx": 17.66,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(6) > div:nth-of-type(2)",
+            "text": "reason-network/1",
+            "fontPx": 17.69,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(5) > div:nth-of-type(2)",
+            "text": "pub struct Connection {pub async fn read_frame<T>(",
+            "fontPx": 17.76,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(5) > div:nth-of-type(2)",
+            "text": "pub struct MembershipRecord {pub fn issue(pub fn signing_bytes(&self)",
+            "fontPx": 17.76,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(6) > div:nth-of-type(2)",
+            "text": "Task Scheduler · systemdlaunchd",
+            "fontPx": 17.79,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(2) > div:nth-of-type(2)",
+            "text": "tests/ · list_teamsend_message · check_inbox",
+            "fontPx": 17.81,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(3) > div:nth-of-type(2)",
+            "text": "pub struct SendMessageArgs {pub struct CheckInboxArgs {pub struct AskUserArgs {",
+            "fontPx": 17.83,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(3) > div:nth-of-type(2)",
+            "text": "reason-network doctor",
+            "fontPx": 17.86,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(4) > div:nth-of-type(2)",
+            "text": "fn should_attempt(&self, now: Instant)fn succeeded(&mut self) {",
+            "fontPx": 17.88,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "tests/ · two daemonsinvite · join · ack · retry",
+            "fontPx": 17.89,
+            "time": 7.5,
+            "seconds": 0.625
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(4) > div:nth-of-type(2)",
+            "text": "pub enum ClaudeEvent {pub struct ClaudeBridge {",
+            "fontPx": 17.91,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(5) > div:nth-of-type(2)",
+            "text": "Claude Code lifecycle hooks",
+            "fontPx": 17.92,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "pub struct MachineIdentity {pub fn load_or_create(data_dir)pub fn peer_id(&self)",
+            "fontPx": 18,
+            "time": 8.625,
+            "seconds": 1.625
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(4) > div:nth-of-type(1)",
+            "text": "update.rs",
+            "fontPx": 25.25,
+            "time": 7.375,
+            "seconds": 2.875
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(4) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "719",
+            "fontPx": 25.25,
+            "time": 7.375,
+            "seconds": 2.875
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "net/mod.rs",
+            "fontPx": 25.32,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1,491",
+            "fontPx": 25.32,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "net/proto.rs",
+            "fontPx": 25.32,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "344",
+            "fontPx": 25.32,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(6) > div:nth-of-type(1)",
+            "text": "main.rs",
+            "fontPx": 25.39,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(3) > div:nth-of-type(1)",
+            "text": "agents.rs",
+            "fontPx": 25.51,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(3) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1,328",
+            "fontPx": 25.51,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(6) > div:nth-of-type(1)",
+            "text": "protocol.rs",
+            "fontPx": 25.56,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(5) > div:nth-of-type(1)",
+            "text": "ipc.rs",
+            "fontPx": 25.65,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(5) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "230",
+            "fontPx": 25.65,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(5) > div:nth-of-type(1)",
+            "text": "team.rs",
+            "fontPx": 25.65,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(5) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "486",
+            "fontPx": 25.65,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(6) > div:nth-of-type(1)",
+            "text": "service.rs",
+            "fontPx": 25.69,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(6) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "830",
+            "fontPx": 25.69,
+            "time": 7.75,
+            "seconds": 0.75
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(2) > div:nth-of-type(1)",
+            "text": "mcp_tools.rs",
+            "fontPx": 25.73,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(2) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "184",
+            "fontPx": 25.73,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(3) > div:nth-of-type(1)",
+            "text": "mcp.rs",
+            "fontPx": 25.76,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(3) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "335",
+            "fontPx": 25.76,
+            "time": 7.5,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1,671",
+            "fontPx": 25.76,
+            "time": 7.625,
+            "seconds": 1.25
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(3) > div:nth-of-type(1)",
+            "text": "doctor.rs",
+            "fontPx": 25.79,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(3) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "482",
+            "fontPx": 25.79,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(4) > div:nth-of-type(1)",
+            "text": "daemon.rs",
+            "fontPx": 25.82,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(4) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1,199",
+            "fontPx": 25.82,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "759",
+            "fontPx": 25.84,
+            "time": 7.5,
+            "seconds": 1
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(4) > div:nth-of-type(1)",
+            "text": "delivery.rs",
+            "fontPx": 25.86,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(4) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "332",
+            "fontPx": 25.86,
+            "time": 7.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(5) > div:nth-of-type(1)",
+            "text": "hook.rs",
+            "fontPx": 25.89,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(5) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "324",
+            "fontPx": 25.89,
+            "time": 7.875,
+            "seconds": 2.375
+          },
+          {
+            "selector": "#al-statlabel",
+            "text": "written with Alan",
+            "fontPx": 26,
+            "time": 7.625,
+            "seconds": 2.625
+          },
+          {
+            "selector": "#al-r2 > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "141",
+            "fontPx": 26,
+            "time": 8.75,
+            "seconds": 1.5
+          },
+          {
+            "selector": "#al-r3 > div:nth-of-type(6) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "299",
+            "fontPx": 26,
+            "time": 8.75,
+            "seconds": 1.5
+          },
+          {
+            "selector": "#al-r1 > div:nth-of-type(6) > div:nth-of-type(1) > span:nth-of-type(1)",
+            "text": "1,287",
+            "fontPx": 26,
+            "time": 8.875,
+            "seconds": 1.375
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"tests/ · two daemonsinvite · join · ack · retry\" (6 words) is on screen 0.66 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "tests/ · two daemonsinvite · join · ack · retry",
+        "selector": "#al-r3 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 0,
+          "y": 1010.09,
+          "width": 48.66,
+          "height": 53.030000000000086
+        },
+        "time": 7.406,
+        "words": 6,
+        "seconds": 0.664,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"pub struct Session {pub struct Message {pub struct Questi...\" (9 words) is on screen 0.20 s (±0.01 s), under its 2.40 s floor: hold it about 0.5 s + 0.3 s a word (3.20 s here) before it leaves or changes; see references/motion.md.",
+        "text": "pub struct Session {pub struct Message {pub struct Question {",
+        "selector": "#al-r1 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 0,
+          "y": 596.23,
+          "width": 11.84,
+          "height": 46.14999999999998
+        },
+        "time": 7.539,
+        "words": 9,
+        "seconds": 0.195,
+        "floorSeconds": 2.4
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"pub struct MembershipRecord {pub fn issue(pub fn signing_...\" (11 words) is on screen 2.57 s (±0.01 s), under its 2.85 s floor: hold it about 0.5 s + 0.3 s a word (3.80 s here) before it leaves or changes; see references/motion.md.",
+        "text": "pub struct MembershipRecord {pub fn issue(pub fn signing_bytes(&self)",
+        "selector": "#al-r1 > div:nth-of-type(5) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 1380.18,
+          "y": 365.43,
+          "width": 309.69000000000005,
+          "height": 111.38
+        },
+        "time": 7.57,
+        "words": 11,
+        "seconds": 2.57,
+        "floorSeconds": 2.85
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"lines of Rust 14.8k\" (5 words) is on screen 1.00 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "lines of Rust 14.8k",
+        "selector": "#al-s1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 150,
+          "y": 157.58,
+          "width": 517,
+          "height": 77
+        },
+        "time": 7.641,
+        "words": 5,
+        "seconds": 1,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"fn should_attempt(&self, now: Instant)fn succeeded(&mut s...\" (10 words) is on screen 2.37 s (±0.01 s), under its 2.63 s floor: hold it about 0.5 s + 0.3 s a word (3.50 s here) before it leaves or changes; see references/motion.md.",
+        "text": "fn should_attempt(&self, now: Instant)fn succeeded(&mut self) {",
+        "selector": "#al-r1 > div:nth-of-type(4) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 955.07,
+          "y": 389.8,
+          "width": 407.73000000000013,
+          "height": 93.75999999999999
+        },
+        "time": 7.773,
+        "words": 10,
+        "seconds": 2.367,
+        "floorSeconds": 2.625
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"pub struct MachineIdentity {pub fn load_or_create(data_di...\" (15 words) is on screen 1.54 s (±0.01 s), under its 3.75 s floor: hold it about 0.5 s + 0.3 s a word (5.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "pub struct MachineIdentity {pub fn load_or_create(data_dir)pub fn peer_id(&self)",
+        "selector": "#al-r2 > div:nth-of-type(1) > div:nth-of-type(2)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 0,
+          "y": 765.06,
+          "width": 1.56,
+          "height": 57.870000000000005
+        },
+        "time": 8.602,
+        "words": 15,
+        "seconds": 1.539,
+        "floorSeconds": 3.75
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"automated tests 126\" (3 words) is on screen 0.83 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "automated tests 126",
+        "selector": "#al-s2",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 150,
+          "y": 157.58,
+          "width": 579.03,
+          "height": 77
+        },
+        "time": 8.641,
+        "words": 3,
+        "seconds": 0.828,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"milestones shipped 4\" (3 words) is on screen 0.67 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "milestones shipped 4",
+        "selector": "#al-s3",
+        "dataAttributes": {},
+        "sourceFile": "compositions/alan.html",
+        "bbox": {
+          "x": 150,
+          "y": 164.49,
+          "width": 614.6600000000001,
+          "height": 77
+        },
+        "time": 9.469,
+        "words": 3,
+        "seconds": 0.672,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 30 text elements stay under it for 0.5 s or more, the smallest \"invite\" at 18 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "invite",
+        "selector": "#nw-pk1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 808.02,
+          "y": 564,
+          "width": 58.08,
+          "height": 26
+        },
+        "time": 12.875,
+        "times": [
+          10.375,
+          10.375,
+          11.5,
+          12.5,
+          12.875,
+          14.125,
+          14.375,
+          15.875,
+          16.25,
+          17.125,
+          17.125,
+          17.125,
+          17.375,
+          17.375,
+          17.375,
+          20.5,
+          20.625,
+          21.75,
+          22.25,
+          23.25,
+          23.25,
+          23.25,
+          26,
+          26.25,
+          27.375,
+          27.375,
+          27.375,
+          27.625,
+          27.625,
+          27.625
+        ],
+        "fontPx": 18.15,
+        "floorPx": 28,
+        "seconds": 0.875,
+        "elements": [
+          {
+            "selector": "#nw-pk1",
+            "text": "invite",
+            "fontPx": 18.15,
+            "time": 12.875,
+            "seconds": 0.875
+          },
+          {
+            "selector": "#nw-pk2",
+            "text": "codex-on-B",
+            "fontPx": 18.15,
+            "time": 16.25,
+            "seconds": 0.875
+          },
+          {
+            "selector": "#nw-pk4",
+            "text": "ack ✓",
+            "fontPx": 20.64,
+            "time": 22.25,
+            "seconds": 0.75
+          },
+          {
+            "selector": "#nw-pk3",
+            "text": "Hello from the hackathon demo!",
+            "fontPx": 21.23,
+            "time": 20.625,
+            "seconds": 0.875
+          },
+          {
+            "selector": "#nw-A2r1 > span:nth-of-type(2)",
+            "text": "local",
+            "fontPx": 21.59,
+            "time": 17.125,
+            "seconds": 2.25
+          },
+          {
+            "selector": "span.nw-tag.blue",
+            "text": "remote · reachable",
+            "fontPx": 21.71,
+            "time": 17.375,
+            "seconds": 2
+          },
+          {
+            "selector": "span.nw-tag.amber",
+            "text": "sent · no ack yet",
+            "fontPx": 21.71,
+            "time": 27.375,
+            "seconds": 2.125
+          },
+          {
+            "selector": "div.f",
+            "text": "from session-a · unread",
+            "fontPx": 21.81,
+            "time": 21.75,
+            "seconds": 2.75
+          },
+          {
+            "selector": "#nw-A3r1 > span:nth-of-type(2)",
+            "text": "acked ✓",
+            "fontPx": 21.81,
+            "time": 23.25,
+            "seconds": 1.25
+          },
+          {
+            "selector": "#nw-pk5",
+            "text": "queued",
+            "fontPx": 21.85,
+            "time": 26.25,
+            "seconds": 3.25
+          },
+          {
+            "selector": "#nw-A4r2 > span:nth-of-type(2)",
+            "text": "acked ✓",
+            "fontPx": 21.89,
+            "time": 27.625,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#nw-linklbl",
+            "text": "iroh · QUIC",
+            "fontPx": 22,
+            "time": 14.375,
+            "seconds": 10.625
+          },
+          {
+            "selector": "#nw-A2r1",
+            "text": "claude-on-A",
+            "fontPx": 23.56,
+            "time": 17.125,
+            "seconds": 2.25
+          },
+          {
+            "selector": "#nw-A2r1 > span:nth-of-type(1)",
+            "text": "claude · idle",
+            "fontPx": 23.56,
+            "time": 17.125,
+            "seconds": 2.25
+          },
+          {
+            "selector": "#nw-A4o1",
+            "text": "sent message msg-18e27075…",
+            "fontPx": 23.56,
+            "time": 26,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#nw-A2r2",
+            "text": "codex-on-B",
+            "fontPx": 23.68,
+            "time": 17.375,
+            "seconds": 2
+          },
+          {
+            "selector": "#nw-A2r2 > span:nth-of-type(1)",
+            "text": "codex · idle",
+            "fontPx": 23.68,
+            "time": 17.375,
+            "seconds": 2
+          },
+          {
+            "selector": "#nw-A4r1",
+            "text": "msg-18e27075…",
+            "fontPx": 23.68,
+            "time": 27.375,
+            "seconds": 2.125
+          },
+          {
+            "selector": "#nw-A4r1 > span:nth-of-type(1)",
+            "text": "→ session-b",
+            "fontPx": 23.68,
+            "time": 27.375,
+            "seconds": 2.125
+          },
+          {
+            "selector": "#nw-A3r1",
+            "text": "msg-18e2706f…",
+            "fontPx": 23.79,
+            "time": 23.25,
+            "seconds": 1.25
+          },
+          {
+            "selector": "#nw-A3r1 > span:nth-of-type(1)",
+            "text": "→ session-b",
+            "fontPx": 23.79,
+            "time": 23.25,
+            "seconds": 1.25
+          },
+          {
+            "selector": "#nw-A1o1",
+            "text": "created team team-243dc185…7e52",
+            "fontPx": 23.88,
+            "time": 11.5,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#nw-B1o1",
+            "text": "joined team team-243dc185…7e52",
+            "fontPx": 23.88,
+            "time": 14.125,
+            "seconds": 0.875
+          },
+          {
+            "selector": "#nw-A4r2",
+            "text": "msg-18e2706f…",
+            "fontPx": 23.88,
+            "time": 27.625,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#nw-A4r2 > span:nth-of-type(1)",
+            "text": "→ session-b",
+            "fontPx": 23.88,
+            "time": 27.625,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#nw-B2s",
+            "text": "codex-on-B · idle",
+            "fontPx": 23.94,
+            "time": 15.875,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#nw-A > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "c05e89…a993b0",
+            "fontPx": 24,
+            "time": 10.375,
+            "seconds": 19.125
+          },
+          {
+            "selector": "#nw-B > div:nth-of-type(1) > div:nth-of-type(2)",
+            "text": "cbb462…935e82",
+            "fontPx": 24,
+            "time": 10.375,
+            "seconds": 19.125
+          },
+          {
+            "selector": "#nw-tokA",
+            "text": "invite 951 chars",
+            "fontPx": 24,
+            "time": 12.5,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#nw-A3o1",
+            "text": "sent message msg-18e2706f…",
+            "fontPx": 24,
+            "time": 20.5,
+            "seconds": 4
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"joined team team-243dc185…7e52\" (5 words) is on screen 0.84 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "joined team team-243dc185…7e52",
+        "selector": "#nw-B1o1",
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 1142.66,
+          "y": 459.44,
+          "width": 429.75,
+          "height": 30.839999999999975
+        },
+        "time": 14.07,
+        "words": 5,
+        "seconds": 0.836,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Kept in the outbox until B is back. No duplicates.\" (10 words) is on screen 1.63 s (±0.01 s), under its 2.63 s floor: hold it about 0.5 s + 0.3 s a word (3.50 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Kept in the outbox until B is back. No duplicates.",
+        "selector": "#nw-sub4",
+        "dataAttributes": {},
+        "sourceFile": "compositions/network.html",
+        "bbox": {
+          "x": 615.36,
+          "y": 965.79,
+          "width": 689.2800000000001,
+          "height": 36
+        },
+        "time": 27.867,
+        "words": 10,
+        "seconds": 1.633,
+        "floorSeconds": 2.625
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 16 text elements stay under it for 0.5 s or more, the smallest \"Claude Code\" at 22 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Claude Code",
+        "selector": "#mc-bar > span:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/mcp.html",
+        "bbox": {
+          "x": 434.17,
+          "y": 272.21,
+          "width": 143.52,
+          "height": 28.66
+        },
+        "time": 29.75,
+        "times": [
+          29.75,
+          30,
+          30.75,
+          30.75,
+          30.75,
+          31.125,
+          31.125,
+          31.125,
+          31.125,
+          31.25,
+          31.25,
+          31.25,
+          31.375,
+          31.375,
+          31.375,
+          31.75
+        ],
+        "fontPx": 21.74,
+        "floorPx": 28,
+        "seconds": 3.5,
+        "elements": [
+          {
+            "selector": "#mc-bar > span:nth-of-type(1)",
+            "text": "Claude Code",
+            "fontPx": 21.74,
+            "time": 29.75,
+            "seconds": 3.5
+          },
+          {
+            "selector": "#mc-user",
+            "text": "Who else is on my Reason Network team?",
+            "fontPx": 26,
+            "time": 30,
+            "seconds": 3.25
+          },
+          {
+            "selector": "#mc-tool",
+            "text": "– list_team",
+            "fontPx": 26,
+            "time": 30.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#mc-tool > b:nth-of-type(1)",
+            "text": "reason-network",
+            "fontPx": 26,
+            "time": 30.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#mc-tool > span:nth-of-type(2)",
+            "text": "(MCP)",
+            "fontPx": 26,
+            "time": 30.75,
+            "seconds": 2.5
+          },
+          {
+            "selector": "#mc-r1 > span:nth-of-type(1)",
+            "text": "alpha",
+            "fontPx": 26,
+            "time": 31.125,
+            "seconds": 2.125
+          },
+          {
+            "selector": "#mc-r1 > span:nth-of-type(2)",
+            "text": "codex",
+            "fontPx": 26,
+            "time": 31.125,
+            "seconds": 2.125
+          },
+          {
+            "selector": "span.s.busy",
+            "text": "busy",
+            "fontPx": 26,
+            "time": 31.125,
+            "seconds": 2.125
+          },
+          {
+            "selector": "#mc-r1 > span:nth-of-type(4)",
+            "text": "Testing local messaging",
+            "fontPx": 26,
+            "time": 31.125,
+            "seconds": 2.125
+          },
+          {
+            "selector": "#mc-r2 > span:nth-of-type(1)",
+            "text": "beta",
+            "fontPx": 26,
+            "time": 31.25,
+            "seconds": 2
+          },
+          {
+            "selector": "#mc-r2 > span:nth-of-type(2)",
+            "text": "codex",
+            "fontPx": 26,
+            "time": 31.25,
+            "seconds": 2
+          },
+          {
+            "selector": "#mc-r2 > span:nth-of-type(3)",
+            "text": "idle",
+            "fontPx": 26,
+            "time": 31.25,
+            "seconds": 2
+          },
+          {
+            "selector": "#mc-r3 > span:nth-of-type(1)",
+            "text": "mcp-agent-mcp",
+            "fontPx": 26,
+            "time": 31.375,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#mc-r3 > span:nth-of-type(2)",
+            "text": "mcp",
+            "fontPx": 26,
+            "time": 31.375,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#mc-r3 > span:nth-of-type(3)",
+            "text": "idle",
+            "fontPx": 26,
+            "time": 31.375,
+            "seconds": 1.875
+          },
+          {
+            "selector": "#mc-ok",
+            "text": "+ send_message · check_inbox · ask_user",
+            "fontPx": 26,
+            "time": 31.75,
+            "seconds": 1.5
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"+ send_message · check_inbox · ask_user\" (6 words) is on screen 1.44 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "+ send_message · check_inbox · ask_user",
+        "selector": "#mc-ok",
+        "dataAttributes": {},
+        "sourceFile": "compositions/mcp.html",
+        "bbox": {
+          "x": 360,
+          "y": 710.97,
+          "width": 608.41,
+          "height": 35
+        },
+        "time": 31.703,
+        "words": 6,
+        "seconds": 1.438,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Built with\" (2 words) is on screen 1.73 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Built with",
+        "selector": "#ou-center",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 877.25,
+          "y": 651,
+          "width": 132.23000000000002,
+          "height": 36
+        },
+        "time": 35.273,
+        "words": 2,
+        "seconds": 1.73,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Alan\" (1 word) is on screen 1.73 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Alan",
+        "selector": "#ou-built > b:nth-of-type(1)",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 1023.48,
+          "y": 651,
+          "width": 65.26999999999998,
+          "height": 36
+        },
+        "time": 35.273,
+        "words": 1,
+        "seconds": 1.73,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"A\" (1 word) is on screen 1.70 s (±0.01 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "A",
+        "selector": "#ou-logo",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 829.53,
+          "y": 653.5,
+          "width": 19.41999999999996,
+          "height": 31
+        },
+        "time": 35.305,
+        "words": 1,
+        "seconds": 1.699,
+        "floorSeconds": 2
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and \"A\" renders at 26 px for 1.63 s: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "A",
+        "selector": "#ou-logo",
+        "dataAttributes": {},
+        "sourceFile": "compositions/outro.html",
+        "bbox": {
+          "x": 829.53,
+          "y": 653.5,
+          "width": 19.42,
+          "height": 31
+        },
+        "time": 35.375,
+        "times": [
+          35.375
+        ],
+        "fontPx": 26,
+        "floorPx": 28,
+        "seconds": 1.625,
+        "elements": [
+          {
+            "selector": "#ou-logo",
+            "text": "A",
+            "fontPx": 26,
+            "time": 35.375,
+            "seconds": 1.625
+          }
+        ]
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 296
+  },
+  "audio": {
+    "ok": false,
+    "errorCount": 19,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0.55,
+        "timeRange": [
+          0.55,
+          1.27
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 2.1,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-2",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 4.5,
+        "timeRange": [
+          4.5,
+          5.22
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/typing.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-typing",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 6.05,
+        "timeRange": [
+          6.05,
+          6.95
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/click.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-click",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 6.97,
+        "timeRange": [
+          6.97,
+          7.34
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh-short.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-2",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 7.25,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-3",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 11.4,
+        "timeRange": [
+          11.4,
+          12.120000000000001
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh-short.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-3",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 12.75,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-4",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 14,
+        "timeRange": [
+          14,
+          14.72
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-4",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 15,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-5",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 17.3,
+        "timeRange": [
+          17.3,
+          18.02
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh-short.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-5",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 20.5,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/notification.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-notify",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 21.65,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-6",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 23.15,
+        "timeRange": [
+          23.15,
+          23.869999999999997
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-6",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 24.6,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-7",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 27.3,
+        "timeRange": [
+          27.3,
+          28.02
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/whoosh-short.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-whoosh-7",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 29.6,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/pop.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-pop-8",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 31,
+        "timeRange": [
+          31,
+          31.72
+        ],
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      },
+      {
+        "code": "audio_source_unreadable",
+        "severity": "error",
+        "message": "assets/sfx/impact-bass-2.mp3 cannot be read as audio ([FFmpeg] ffprobe not found. Please install FFmpeg.), so the render's audio mix fails and the render stops.",
+        "selector": "#sfx-impact",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 34.1,
+        "fixHint": "Point src at a file with an audio track, or re-export this one."
+      }
+    ]
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

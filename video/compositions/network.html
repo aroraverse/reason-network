@@ -1,0 +1,212 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f6f6f4; font-family: Inter, sans-serif; color: #111; overflow: hidden; }
+    .nw-cap { position: absolute; left: 0; right: 0; top: 112px; text-align: center; font-size: 58px; font-weight: 500; letter-spacing: -0.03em; }
+    .nw-cap b { color: #2563ff; font-weight: 500; }
+    .nw-cap.ok b { color: #16a34a; }
+    .nw-panel { position: absolute; top: 250px; width: 700px; height: 660px; background: #fff; border: 1px solid #e4e4e0; border-radius: 22px; box-shadow: 0 24px 70px rgba(0,0,0,.07); overflow: hidden; }
+    #nw-A { left: 110px; }
+    #nw-B { left: 1110px; }
+    .nw-hd { height: 78px; border-bottom: 1px solid #ededea; display: flex; align-items: center; justify-content: space-between; padding: 0 28px; }
+    .nw-title { display: flex; align-items: center; gap: 14px; font-size: 28px; font-weight: 600; letter-spacing: -0.02em; }
+    .nw-dot { width: 14px; height: 14px; border-radius: 50%; background: #22c55e; }
+    .nw-pid { font: 500 24px "JetBrains Mono", monospace; color: #8a8a86; }
+    .nw-body { position: absolute; left: 0; right: 0; top: 79px; bottom: 0; }
+    .nw-g { position: absolute; left: 30px; right: 30px; top: 26px; font: 500 24px/1.6 "JetBrains Mono", monospace; }
+    .nw-cmd { color: #111; white-space: nowrap; }
+    .nw-cmd i { font-style: normal; color: #2563ff; }
+    .nw-cmd .a { color: #8a8a86; }
+    .nw-out { color: #8a8a86; margin: 4px 0 22px; white-space: nowrap; }
+    .nw-out.ok { color: #16a34a; }
+    .nw-tok { display: inline-flex; align-items: center; gap: 12px; padding: 8px 18px; background: #f1f4ff; border: 1px solid #d6e0ff; border-radius: 12px; color: #2563ff; }
+    .nw-tok s { text-decoration: none; display: inline-block; width: 170px; height: 16px; border-radius: 4px; background: repeating-linear-gradient(90deg, #9db5ff 0 10px, transparent 10px 16px); }
+    .nw-row { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border: 1px solid #ededea; border-radius: 14px; margin-bottom: 12px; color: #111; white-space: nowrap; }
+    .nw-row .m { color: #8a8a86; }
+    .nw-tag { margin-left: auto; padding: 3px 12px; border-radius: 8px; font-size: 22px; background: #f0f0ed; color: #8a8a86; }
+    .nw-tag.blue { background: #e8eeff; color: #2563ff; }
+    .nw-tag.green { background: #e7f8ee; color: #16a34a; }
+    .nw-tag.amber { background: #fff4e0; color: #b45309; }
+    .nw-msg { padding: 20px 22px; border-radius: 16px; background: #f1f4ff; border: 1px solid #d6e0ff; font-family: Inter, sans-serif; }
+    .nw-msg .f { font: 500 22px "JetBrains Mono", monospace; color: #8a8a86; margin-bottom: 8px; }
+    .nw-msg .t { font-size: 30px; font-weight: 500; letter-spacing: -0.01em; }
+    .nw-sess { display: inline-flex; align-items: center; gap: 12px; padding: 12px 22px; border-radius: 999px; background: #111; color: #fff; font: 500 24px "JetBrains Mono", monospace; }
+    .nw-sess .nw-dot { background: #22c55e; }
+    #nw-link { position: absolute; left: 810px; top: 575px; width: 300px; height: 4px; background: repeating-linear-gradient(90deg, #cfcfca 0 10px, transparent 10px 18px); }
+    #nw-linkfill { position: absolute; inset: 0; background: #2563ff; transform-origin: 0 50%; }
+    #nw-linklbl { position: absolute; left: 810px; width: 300px; top: 600px; text-align: center; font: 500 22px "JetBrains Mono", monospace; color: #2563ff; }
+    .nw-pk { position: absolute; top: 553px; left: 790px; height: 48px; padding: 0 18px; border-radius: 999px; display: flex; align-items: center; gap: 10px; font: 600 22px Inter, sans-serif; color: #fff; background: #2563ff; box-shadow: 0 10px 30px rgba(37,99,255,.35); white-space: nowrap; }
+    .nw-pk.g { background: #16a34a; box-shadow: 0 10px 30px rgba(22,163,74,.35); }
+    .nw-pk.am { background: #f59e0b; box-shadow: 0 10px 30px rgba(245,158,11,.35); }
+    #nw-Bshade { position: absolute; inset: 0; background: rgba(246,246,244,.72); }
+    #nw-Boff { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); padding: 14px 28px; border-radius: 999px; background: #111; color: #fff; font-size: 28px; font-weight: 600; white-space: nowrap; }
+    #nw-sub4 { position: absolute; left: 0; right: 0; top: 960px; text-align: center; font-size: 30px; color: #8a8a86; }
+    #nw-sub4 b { color: #111; font-weight: 600; }
+  </style>
+  <div id="root" data-composition-id="network" data-width="1920" data-height="1080">
+    <!-- captions, one per beat -->
+    <div id="nw-c1w" class="clip" data-start="0" data-duration="4.8"><div id="nw-c1" class="nw-cap">Create a team. <b>Invite</b> a machine.</div></div>
+    <div id="nw-c2w" class="clip" data-start="4.8" data-duration="4.4"><div id="nw-c2" class="nw-cap">Every agent session, <b>discoverable</b>.</div></div>
+    <div id="nw-c3w" class="clip" data-start="9.2" data-duration="5.2"><div id="nw-c3" class="nw-cap">Message any agent. Get an <b>ack</b>.</div></div>
+    <div id="nw-c4w" class="clip" data-start="14.4" data-duration="5.0"><div id="nw-c4" class="nw-cap">Peer offline? The message <b>waits</b>.</div></div>
+
+    <div id="nw-stage" class="clip" data-start="0" data-duration="19.4" data-layout-allow-overlap>
+      <div id="nw-link"><div id="nw-linkfill"></div></div>
+      <div id="nw-linklbl">iroh · QUIC</div>
+
+      <div class="nw-panel" id="nw-A">
+        <div class="nw-hd"><div class="nw-title"><span class="nw-dot"></span>Computer A</div><div class="nw-pid">c05e89…a993b0</div></div>
+        <div class="nw-body">
+          <div class="nw-g" id="nw-A1">
+            <div class="nw-cmd" id="nw-A1c1"><i>$</i> reason-network team-create<br>&nbsp;&nbsp;<span class="a">--name</span> hackathon-team</div>
+            <div class="nw-out" id="nw-A1o1">created team team-243dc185…7e52</div>
+            <div class="nw-cmd" id="nw-A1c2"><i>$</i> reason-network team-invite<br>&nbsp;&nbsp;<span class="a">--team</span> team-243dc185…7e52</div>
+            <div class="nw-out" id="nw-A1o2"><span class="nw-tok" id="nw-tokA">invite <s></s> 951 chars</span></div>
+          </div>
+          <div class="nw-g" id="nw-A2">
+            <div class="nw-cmd" id="nw-A2c1"><i>$</i> reason-network directory</div>
+            <div class="nw-out">&nbsp;</div>
+            <div class="nw-row" id="nw-A2r1">claude-on-A <span class="m">claude · idle</span><span class="nw-tag">local</span></div>
+            <div class="nw-row" id="nw-A2r2">codex-on-B <span class="m">codex · idle</span><span class="nw-tag blue">remote · reachable</span></div>
+          </div>
+          <div class="nw-g" id="nw-A3">
+            <div class="nw-cmd" id="nw-A3c1"><i>$</i> reason-network send-message<br>&nbsp;&nbsp;<span class="a">--from</span> session-a <span class="a">--to</span> session-b<br>&nbsp;&nbsp;"Hello from the hackathon demo!"</div>
+            <div class="nw-out" id="nw-A3o1">sent message msg-18e2706f…</div>
+            <div class="nw-cmd" id="nw-A3c2"><i>$</i> reason-network outbox</div>
+            <div class="nw-out">&nbsp;</div>
+            <div class="nw-row" id="nw-A3r1">msg-18e2706f… <span class="m">→ session-b</span><span class="nw-tag green">acked ✓</span></div>
+          </div>
+          <div class="nw-g" id="nw-A4">
+            <div class="nw-cmd" id="nw-A4c1"><i>$</i> reason-network send-message<br>&nbsp;&nbsp;<span class="a">--from</span> session-a <span class="a">--to</span> session-b<br>&nbsp;&nbsp;"This was sent while you were offline!"</div>
+            <div class="nw-out" id="nw-A4o1">sent message msg-18e27075…</div>
+            <div class="nw-cmd" id="nw-A4c2"><i>$</i> reason-network outbox</div>
+            <div class="nw-out">&nbsp;</div>
+            <div class="nw-row" id="nw-A4r1">msg-18e27075… <span class="m">→ session-b</span><span class="nw-tag amber">sent · no ack yet</span></div>
+            <div class="nw-row" id="nw-A4r2">msg-18e2706f… <span class="m">→ session-b</span><span class="nw-tag green">acked ✓</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="nw-panel" id="nw-B">
+        <div class="nw-hd"><div class="nw-title"><span class="nw-dot" id="nw-Bdot"></span>Computer B</div><div class="nw-pid">cbb462…935e82</div></div>
+        <div class="nw-body">
+          <div class="nw-g" id="nw-B1">
+            <div class="nw-cmd" id="nw-B1c1"><i>$</i> reason-network team-join<br>&nbsp;&nbsp;<span class="nw-tok" id="nw-tokB">invite <s></s></span></div>
+            <div class="nw-out ok" id="nw-B1o1">joined team team-243dc185…7e52</div>
+          </div>
+          <div class="nw-g" id="nw-B2">
+            <div class="nw-cmd" id="nw-B2c1"><i>$</i> reason-network register<br>&nbsp;&nbsp;<span class="a">--name</span> codex-on-B<br>&nbsp;&nbsp;<span class="a">--session-key</span> session-b</div>
+            <div class="nw-out">&nbsp;</div>
+            <div class="nw-sess" id="nw-B2s"><span class="nw-dot"></span>codex-on-B · idle</div>
+          </div>
+          <div class="nw-g" id="nw-B3">
+            <div class="nw-cmd" id="nw-B3c1"><i>$</i> reason-network inbox<br>&nbsp;&nbsp;<span class="a">--session</span> session-b</div>
+            <div class="nw-out">&nbsp;</div>
+            <div class="nw-msg" id="nw-B3m"><div class="f">from session-a · unread</div><div class="t">Hello from the hackathon demo!</div></div>
+          </div>
+        </div>
+        <div id="nw-Bshade"><div id="nw-Boff">daemon stopped</div></div>
+      </div>
+
+      <div class="nw-pk" id="nw-pk1">invite</div>
+      <div class="nw-pk" id="nw-pk2">codex-on-B</div>
+      <div class="nw-pk" id="nw-pk3">Hello from the hackathon demo!</div>
+      <div class="nw-pk g" id="nw-pk4">ack ✓</div>
+      <div class="nw-pk am" id="nw-pk5">queued</div>
+      <div id="nw-sub4">Kept in the outbox until B is back. <b>No duplicates.</b></div>
+    </div>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    const IN = { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "power3.out" };
+    const capIn = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 24, filter: "blur(8px)" }, { ...IN }, t);
+    const capOut = (sel, t) => tl.to(sel, { opacity: 0, y: -20, filter: "blur(8px)", duration: 0.3, ease: "power3.in" }, t);
+    const type = (sel, t, d) => tl.fromTo(sel, { clipPath: "inset(0 100% 0 0)", opacity: 1 }, { clipPath: "inset(0 0% 0 0)", duration: d || 0.5, ease: "none" }, t);
+    const pop = (sel, t) => tl.fromTo(sel, { opacity: 0, y: 12, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.35, ease: "back.out(1.6)" }, t);
+    const grpOut = (sel, t) => tl.to(sel, { opacity: 0, duration: 0.25, ease: "power2.in" }, t);
+    // packets ride the link: x is offset from left 790 (A edge) to B edge
+    const fly = (sel, t, from, to, d) => {
+      tl.fromTo(sel, { x: from, opacity: 0, scale: 0.6 }, { x: from, opacity: 1, scale: 1, duration: 0.18, ease: "power2.out" }, t);
+      tl.to(sel, { x: to, duration: d || 0.7, ease: "power2.inOut" }, t + 0.15);
+    };
+
+    // hidden starts
+    tl.set(["#nw-A2", "#nw-A3", "#nw-A4", "#nw-B2", "#nw-B3"], { opacity: 0 }, 0);
+    tl.set(["#nw-A1c1", "#nw-A1o1", "#nw-A1c2", "#nw-A1o2", "#nw-B1c1", "#nw-B1o1"], { opacity: 0 }, 0);
+    tl.set([".nw-pk", "#nw-Bshade", "#nw-sub4"], { opacity: 0 }, 0);
+    tl.set("#nw-linkfill", { scaleX: 0 }, 0);
+    tl.set("#nw-linklbl", { opacity: 0 }, 0);
+
+    // ── beat 1: team (0 – 4.8)
+    tl.fromTo("#nw-A", { opacity: 0, x: -60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0);
+    tl.fromTo("#nw-B", { opacity: 0, x: 60 }, { opacity: 1, x: 0, duration: 0.5, ease: "power3.out" }, 0.05);
+    tl.fromTo("#nw-link", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 0.3);
+    capIn("#nw-c1", 0.1);
+    type("#nw-A1c1", 0.5, 0.55);
+    pop("#nw-A1o1", 1.2);
+    type("#nw-A1c2", 1.55, 0.5);
+    pop("#nw-A1o2", 2.15);
+    fly("#nw-pk1", 2.5, 0, 260, 0.7);
+    tl.to("#nw-pk1", { opacity: 0, scale: 0.6, duration: 0.2 }, 3.35);
+    type("#nw-B1c1", 3.25, 0.4);
+    pop("#nw-B1o1", 3.8);
+    tl.to("#nw-linkfill", { scaleX: 1, duration: 0.45, ease: "power3.out" }, 3.85);
+    tl.fromTo("#nw-linklbl", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, 4.0);
+    capOut("#nw-c1", 4.45);
+    grpOut(["#nw-A1", "#nw-B1"], 4.5);
+
+    // ── beat 2: discovery (4.8 – 9.2)
+    capIn("#nw-c2", 4.85);
+    tl.set("#nw-B2", { opacity: 1 }, 4.8);
+    tl.set(["#nw-B2c1", "#nw-B2s"], { opacity: 0 }, 4.8);
+    type("#nw-B2c1", 5.0, 0.45);
+    pop("#nw-B2s", 5.55);
+    fly("#nw-pk2", 5.9, 260, 0, 0.7);
+    tl.to("#nw-pk2", { opacity: 0, scale: 0.6, duration: 0.2 }, 6.75);
+    tl.set("#nw-A2", { opacity: 1 }, 4.8);
+    tl.set(["#nw-A2c1", "#nw-A2r1", "#nw-A2r2"], { opacity: 0 }, 4.8);
+    type("#nw-A2c1", 6.3, 0.35);
+    pop("#nw-A2r1", 6.85);
+    pop("#nw-A2r2", 7.1);
+    tl.fromTo("#nw-A2r2", { boxShadow: "0 0 0 0 rgba(37,99,255,0)" }, { boxShadow: "0 0 0 4px rgba(37,99,255,.25)", duration: 0.3, yoyo: true, repeat: 1 }, 7.4);
+    capOut("#nw-c2", 8.85);
+    grpOut(["#nw-A2", "#nw-B2"], 8.9);
+
+    // ── beat 3: message + ack (9.2 – 14.4)
+    capIn("#nw-c3", 9.25);
+    tl.set(["#nw-A3", "#nw-B3"], { opacity: 1 }, 9.2);
+    tl.set(["#nw-A3c1", "#nw-A3o1", "#nw-A3c2", "#nw-A3r1", "#nw-B3c1", "#nw-B3m"], { opacity: 0 }, 9.2);
+    type("#nw-A3c1", 9.35, 0.7);
+    pop("#nw-A3o1", 10.15);
+    fly("#nw-pk3", 10.3, -40, 120, 0.75);
+    tl.to("#nw-pk3", { opacity: 0, scale: 0.7, duration: 0.2 }, 11.2);
+    type("#nw-B3c1", 10.9, 0.4);
+    pop("#nw-B3m", 11.45);
+    fly("#nw-pk4", 11.95, 240, 20, 0.6);
+    tl.to("#nw-pk4", { opacity: 0, scale: 0.6, duration: 0.2 }, 12.7);
+    type("#nw-A3c2", 12.4, 0.3);
+    pop("#nw-A3r1", 12.95);
+    capOut("#nw-c3", 14.05);
+    grpOut(["#nw-A3", "#nw-B3"], 14.1);
+
+    // ── beat 4: offline (14.4 – 19.4)
+    capIn("#nw-c4", 14.45);
+    tl.to("#nw-Bshade", { opacity: 1, duration: 0.35, ease: "power2.out" }, 14.6);
+    tl.fromTo("#nw-Boff", { scale: 0.8 }, { scale: 1, duration: 0.35, ease: "back.out(1.8)" }, 14.6);
+    tl.to("#nw-Bdot", { backgroundColor: "#ef4444", duration: 0.2 }, 14.6);
+    tl.to("#nw-linkfill", { scaleX: 0, duration: 0.4, ease: "power2.in" }, 14.65);
+    tl.to("#nw-linklbl", { opacity: 0, duration: 0.3 }, 14.65);
+    tl.set("#nw-A4", { opacity: 1 }, 14.4);
+    tl.set(["#nw-A4c1", "#nw-A4o1", "#nw-A4c2", "#nw-A4r1", "#nw-A4r2"], { opacity: 0 }, 14.4);
+    type("#nw-A4c1", 15.0, 0.65);
+    pop("#nw-A4o1", 15.75);
+    fly("#nw-pk5", 15.9, 0, 70, 0.55);
+    tl.fromTo("#nw-pk5", { y: 0 }, { y: -6, duration: 0.4, yoyo: true, repeat: 5, ease: "sine.inOut" }, 16.6);
+    type("#nw-A4c2", 16.6, 0.3);
+    pop("#nw-A4r1", 17.1);
+    pop("#nw-A4r2", 17.3);
+    tl.fromTo("#nw-sub4", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 17.6);
+    tl.to("#nw-stage", { opacity: 0, duration: 0.3, ease: "power2.in" }, 19.05);
+    tl.to("#nw-c4", { opacity: 0, duration: 0.3, ease: "power2.in" }, 19.05);
+    window.__timelines["network"] = tl;
+  </script>
+</template>

@@ -1,0 +1,122 @@
+name: Release
+
+# Publishing happens only when a version tag (v1.2.3) is pushed by someone
+# with write access, and only after the `release` environment approves it
+# (configure required reviewers under Settings > Environments > release).
+# A manual run builds and uploads the artifacts without publishing anything.
+on:
+  push:
+    tags: ["v[0-9]+.[0-9]+.[0-9]+*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  version:
+    name: Check version
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: version
+        name: Tag matches Cargo.toml
+        run: |
+          version="$(python3 -c 'import sys; sys.path.insert(0, "scripts"); import package; print(package.cargo_version())')"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if [ "${GITHUB_REF_TYPE}" = "tag" ] && [ "${GITHUB_REF_NAME}" != "v${version}" ]; then
+            echo "::error::tag ${GITHUB_REF_NAME} does not match Cargo.toml version ${version}"
+            exit 1
+          fi
+
+  build:
+    name: Build ${{ matrix.target }}
+    needs: version
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: x86_64-pc-windows-msvc
+            os: windows-latest
+            exe: reason-network.exe
+          - target: x86_64-unknown-linux-gnu
+            # The oldest supported Ubuntu runner, for the widest glibc compatibility.
+            os: ubuntu-22.04
+            exe: reason-network
+          - target: aarch64-apple-darwin
+            os: macos-14
+            exe: reason-network
+          - target: x86_64-apple-darwin
+            os: macos-15-intel
+            exe: reason-network
+    env:
+      # Baked into the binary so `reason-network update` knows where releases live.
+      REASON_NETWORK_REPO: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+        with:
+          targets: ${{ matrix.target }}
+      - uses: Swatinem/rust-cache@v2
+        with:
+          key: ${{ matrix.target }}
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Test
+        run: cargo test --locked --target ${{ matrix.target }}
+      - name: Build
+        run: cargo build --release --locked --target ${{ matrix.target }}
+      - name: Smoke test
+        shell: bash
+        run: |
+          out="$(target/${{ matrix.target }}/release/${{ matrix.exe }} --version)"
+          echo "$out"
+          [ "$out" = "reason-network ${{ needs.version.outputs.version }}" ]
+      - name: Package
+        shell: bash
+        run: >
+          python scripts/package.py package
+          --binary target/${{ matrix.target }}/release/${{ matrix.exe }}
+          --target ${{ matrix.target }}
+          --version ${{ needs.version.outputs.version }}
+          --out dist
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dist-${{ matrix.target }}
+          path: dist/*
+          if-no-files-found: error
+
+  publish:
+    name: Publish release
+    needs: [version, build]
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: dist-*
+          path: dist
+          merge-multiple: true
+      - name: Checksums
+        run: |
+          python3 scripts/package.py sums --out dist
+          cat dist/SHA256SUMS
+          (cd dist && sha256sum -c SHA256SUMS)
+      - name: Create the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "${GITHUB_REF_NAME}" dist/*
+          --verify-tag
+          --title "reason-network ${{ needs.version.outputs.version }}"
+          --generate-notes

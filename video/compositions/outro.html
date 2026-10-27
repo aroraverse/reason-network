@@ -1,0 +1,58 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; background: #f6f6f4; font-family: Inter, sans-serif; color: #111; }
+    #ou-grid { position: absolute; left: 50%; top: 50%; width: 1500px; margin-left: -750px; height: 560px; margin-top: -300px; display: grid; grid-template-columns: repeat(30, 1fr); grid-template-rows: repeat(11, 1fr); gap: 10px; }
+    .ou-c { border-radius: 6px; background: #e6e6e2; }
+    #ou-center { position: absolute; left: 0; right: 0; top: 330px; text-align: center; }
+    #ou-mark { display: inline-grid; grid-template-columns: repeat(3, 18px); gap: 8px; margin-bottom: 30px; }
+    .ou-m { width: 18px; height: 18px; border-radius: 5px; background: #111; }
+    .ou-m.b { background: #2563ff; }
+    #ou-name { font-size: 96px; font-weight: 600; letter-spacing: -0.045em; line-height: 1; }
+    #ou-stack { margin-top: 26px; font: 500 30px "JetBrains Mono", monospace; color: #8a8a86; }
+    #ou-built { margin-top: 40px; display: inline-flex; align-items: center; gap: 14px; padding: 12px 28px 12px 12px; background: #fff; border: 1px solid #e4e4e0; border-radius: 999px; font-size: 30px; font-weight: 500; box-shadow: 0 16px 40px rgba(0,0,0,.06); }
+    #ou-logo { width: 48px; height: 48px; border-radius: 50%; background: #2563ff; color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 26px; }
+    #ou-built b { font-weight: 600; }
+  </style>
+  <div id="root" data-composition-id="outro" data-width="1920" data-height="1080">
+    <div id="ou-gridw" class="clip" data-start="0" data-duration="3.8"><div id="ou-grid"></div></div>
+    <div id="ou-centerw" class="clip" data-start="0" data-duration="3.8">
+      <div id="ou-center">
+        <div id="ou-mark">
+          <i class="ou-m"></i><i class="ou-m b"></i><i class="ou-m"></i>
+          <i class="ou-m b"></i><i class="ou-m"></i><i class="ou-m b"></i>
+          <i class="ou-m"></i><i class="ou-m b"></i><i class="ou-m"></i>
+        </div>
+        <div id="ou-name">Reason Network</div>
+        <div id="ou-stack">Rust · iroh · QUIC · SQLite · MCP</div>
+        <div id="ou-built"><span id="ou-logo">A</span>Built with <b data-var-text="ideName">Alan</b></div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const grid = document.getElementById("ou-grid");
+    let seed = 7;
+    const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+    const lit = [], edge = [], inner = [];
+    for (let r = 0; r < 11; r++) {
+      for (let c = 0; c < 30; c++) {
+        const el = document.createElement("i");
+        el.className = "ou-c";
+        grid.appendChild(el);
+        const isInner = r >= 2 && r <= 8 && c >= 5 && c <= 24;
+        (isInner ? inner : edge).push(el);
+        if (rnd() < 0.45) lit.push(el);
+      }
+    }
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo(".ou-c", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.3, ease: "power2.out", stagger: { each: 0.0015, from: "center" } }, 0);
+    tl.to(lit, { backgroundColor: "#2563ff", duration: 0.2, stagger: { each: 0.004, from: "random" } }, 0.25);
+    // the middle clears into a frame for the mark
+    tl.to(inner, { opacity: 0, scale: 0.4, duration: 0.3, ease: "power2.in", stagger: { each: 0.002, from: "center" } }, 1.0);
+    tl.to(edge, { opacity: 0.35, duration: 0.4 }, 1.6);
+    tl.fromTo(".ou-m", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", stagger: { each: 0.03, from: "center" } }, 1.15);
+    tl.fromTo("#ou-name", { opacity: 0, y: 26, filter: "blur(10px)" }, { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.5, ease: "power3.out" }, 1.3);
+    tl.fromTo("#ou-stack", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 1.65);
+    tl.fromTo("#ou-built", { opacity: 0, y: 14, scale: 0.9 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 2.0);
+    window.__timelines["outro"] = tl;
+  </script>
+</template>
